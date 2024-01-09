@@ -113,7 +113,7 @@ function get_resource_identificator($api,$service_type,$service_name,$resource_n
   curl_close($req);
 
   //Handles any error codes
-  handle_response_code($httpCode);
+  if(handle_response_code($httpCode)){
   $data = json_decode($res, true);
 
   //Loops thorugh every json entry for host and returs empty if not found or a match.
@@ -130,7 +130,7 @@ function get_resource_identificator($api,$service_type,$service_name,$resource_n
 }
 }
 }
-
+}
 function setArecord($api,$service_type,$service_name,$resource_name,$resource_identificator,$account,$pwd,$hostname,$ip){
   // Combine the the info for request URL
   $serviceurl = $api . $service_type . $service_name . $resource_name . $resource_identificator;
