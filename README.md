@@ -52,3 +52,10 @@ EOF
    - Hostname: `www.example.com`
    - Username/Email: `<Zone.ee username>`
    - Password Key: `<API key>`
+
+### Limitations
+
+1. Only 1 subdomain is allowed:
+- example.example.com
+- or example.example.co.uk
+ 
